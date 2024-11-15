@@ -1,6 +1,34 @@
 Here are all of the instructions to start the website
 
-There are two parts to the website. The Hapi API Server, and the React web server.
+I had to do some wacky things. These are all of the code files. You need to install all the packages and dependancies yourself
+
+HAPI:
+
+Create a folder Project
+Inside that folder create a folder Hapi Server
+
+run the command: npm init
+run the command: npm install @hapi/hapi
+
+take the server.js file and put it inside that directory. 
+
+run: npm install mongodb
+
+
+REACT:
+Inside project folder create a folder REACT
+Inside that folder, open the terminal and run the command: npx create-react-app webProject
+run: npm install react-router-dom
+
+Delete all files inside the src folder and replace them with the ones in the github. Everything should work properly.
+
+If it doesn't work, let me know.
+
+
+
+
+
+There are two parts to start the website. The Hapi API Server, and the React web server.
 
 1. First open the HapiServer Folder. 
 2. Open the terminal from that directory
