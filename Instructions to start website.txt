@@ -1,0 +1,19 @@
+Here are all of the instructions to start the website
+
+There are two parts to the website. The Hapi API Server, and the React web server.
+
+1. First open the HapiServer Folder. 
+2. Open the terminal from that directory
+3. run node server.js
+
+This should start the api server on localhost:3000. It is mandatory that the api server starts on port 3000
+
+4. Next go to the React Folder
+5. Open the terminal from that directory
+6. run npm start
+
+It will ask if it is okay to start on a different port. This is fine. Just type y.
+It should open a browser and you can see the home page.
+
+Some errors you might encounter:
+It may say mongo is not found. This means that mongodb is not installed on your computer try reinstalling.
