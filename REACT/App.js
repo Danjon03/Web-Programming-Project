@@ -8,6 +8,40 @@ import IndividualPost from './pages/individualPost';
 import './App.css';
 // npm install react-router-dom
 const App = () => {
+
+    function getCookie(cname) {
+        let name = cname + "=";
+        let decodedCookie = decodeURIComponent(document.cookie);
+        let ca = decodedCookie.split(';');
+        for(let i = 0; i <ca.length; i++) {
+          let c = ca[i];
+          while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+          }
+          if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+          }
+        }
+        return "";
+      }
+
+
+      function renderCreatePost()
+      {
+        if(getCookie("isOwner") === "True")
+        {
+            return(
+
+                <li>
+                        
+                        <Link to="/createPost">Create Post </Link>
+                    </li>
+
+
+            );
+        }
+      }
+
     return (
 
 
@@ -19,14 +53,10 @@ const App = () => {
                         <Link to="/">Login</Link>
                     </li>
                     <li>
-                        <Link to="/createAccount">Create Account</Link>
-                    </li>
-                    <li>
+                        
                         <Link to="/posts">Posts</Link>
                     </li>
-                    <li>
-                        <Link to="/createPost">Create Post</Link>
-                    </li>
+                    {renderCreatePost()}
 
 
                 </ul>
