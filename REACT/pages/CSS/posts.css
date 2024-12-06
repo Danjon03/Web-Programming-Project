@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+
+
+
+body{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('BluePurpleGalaxy.webp') no-repeat; /*Sourced from https://www.color-meanings.com/what-color-purple-blue-make-mixed/ */
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+
+
+.three-columns-grid {
+    display: grid;
+    grid-auto-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    height: 100%;
+    width: 100%;
+    
+}
+
+.parent{
+    width: 100%;
+    height: 100%;
+    /* Aligns the children items in a row direction */
+    display: flex;
+}
+
+
+/* columns */
+.three-columns-grid > * {
+    padding:1rem;
+    height: 80%;
+    transform: translateY(50%);
+}
+
+.middle{
+    background-color: white;
+    height: 100%;
+    width: 800px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin-top: 100px;
+    transform: translateX(-40%);
+
+
+}
+
+
+
+.link{
+    align-items: left;
+    margin-left: 150px;
+    
+}
+
+
+
+.label{
+    transform: translateX(+40%);
+}
+
+li{
+    list-style-type: none;
+}
+
+.each-post
+{
+    outline: 1px solid grey;
+    margin: 1px;
+}
+
