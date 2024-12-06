@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {Link} from 'react-router-dom';
-
+import './CSS/createAccount.css';
 
 const CreateAccount = () => {
   const [message, setMessage] = useState('');
@@ -46,17 +46,25 @@ const CreateAccount = () => {
     };
 
     return (
-        <div>
-            <h1>Enter your Username and Password to Create your Free Account!</h1>
+        <div class="wrapper">
+            <h1>Create Account</h1>
                     <form onSubmit={handleSubmit}>
+                      
+                      <div class="input-box">
                       <input name="username" placeholder="Enter Username" required />
-                      <br></br>
-                      <input name="password" placeholder = "Enter Password" type="password" required/>
-                      <br></br>
-                      <input name="password2" placeholder = "Confirm Password" type="password" required/>
-                      <button type="submit" >Create Account</button>
+                      </div>
+
+                      <div class="input-box">
+                      <input  name="password" placeholder = "Enter Password" type="password" required/>
+                      </div>
+
+                      <div class="input-box">
+                      <input  name="password2" placeholder = "Confirm Password" type="password" required/>
+                      </div>
+
+                      <button class="btn" type="submit" >Create Account</button>
                     </form>
-                    <Link to="/login" >Create Account</Link>
+                    <Link to="/" >Login</Link>
 
 
                     {message && <p>{message}</p>}

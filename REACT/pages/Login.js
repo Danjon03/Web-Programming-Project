@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import {Link} from 'react-router-dom';
+import './CSS/login.css';
+
 const Login = () => {
+
+  //the first thing the application does is access all user data for login
         const [data, setData] = useState([]);
         const [loading, setLoading] = useState(true);
         const [error, setError] = useState(null);
@@ -33,6 +37,7 @@ const Login = () => {
           return <div>Error: {error}</div>;
         }
         
+        //validates that the login is correct and sets the correct cookies 
         function ValidateLogin(formData)
         {
             function validate(x)
@@ -52,19 +57,26 @@ const Login = () => {
     }
 
     return (
-        <div>
-            <h1>Enter your Username and Password to Log in!</h1>
+        <div class="wrapper">
+            <h1>Login</h1>
             
             <form action={ValidateLogin}>
-                <input name="username" placeholder="username" />
-      
-                <br></br>
 
-                <input name="password" placeholder = "password" type="password"/>
-                <button type="submit" >Login</button>
+              <div class="input-box">
+                <input name="username" placeholder="Username" />
+              </div>
+                
+              <div class="input-box">
+                <input name="password" placeholder = "Password" type="password"/>
+              </div>
+
+                <button type="submit" class="btn" >Login</button>
             </form>
-            <Link to="/createAccount" >Create Account</Link>
 
+            <div class="register-link">
+              <p>Don't have an account?
+              <Link to="/createAccount" > Register</Link></p>
+            </div>
 
         </div>
     );
