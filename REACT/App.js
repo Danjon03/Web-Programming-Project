@@ -47,7 +47,7 @@ const App = () => {
 
         //This is what displays the different links at the top of the page
         <Router>
-            <nav>
+            {/* <nav class="nav-bar">
                 <ul>
                     <li>
                         <Link to="/">Login</Link>
@@ -56,11 +56,11 @@ const App = () => {
                         
                         <Link to="/posts">Posts</Link>
                     </li>
-                    {renderCreatePost()}
+                    { renderCreatePost()}
 
 
                 </ul>
-            </nav>
+            </nav> */}
 
 
             {/* This is how the links know what page to open when clicked on */}
